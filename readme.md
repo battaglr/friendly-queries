@@ -7,12 +7,12 @@ Human-friendly breakpoints with Sass.
 A small set of mixins that attempts to make working with media queries a bit
 easier by using memorable names to define each breakpoint.
 
-If you're looking for extensive and flexible solutions, this isn't for you.
-We keep things simple in here.
+If you're looking for an extensive solution, this isn't for you. We keep things
+simple in here.
 
 ## How do I use it?
 
-There are 3 different breakpoints to choose from:
+There are 3 different mixins to choose from:
 
 1. `less-than()`
 2. `greater-than()`
