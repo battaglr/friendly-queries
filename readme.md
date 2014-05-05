@@ -1,4 +1,4 @@
-# Breakpoints
+# Breakpoint
 
 Human-friendly breakpoints with Sass.
 
