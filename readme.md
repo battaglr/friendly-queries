@@ -34,7 +34,7 @@ If you're familiar with Sass, the usage is very straight forward:
 selector {
   property: value;
 
-  @include greater-than($viewport-narrow) {
+  @include breakpoint-above($viewport-narrow) {
     another-property: value;
   }
 }
