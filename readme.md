@@ -14,9 +14,9 @@ simple in here.
 
 There are 3 different mixins to choose from:
 
-1. `less-than()`
-2. `greater-than()`
-3. `between()`
+1. `breakpoint-below()`
+2. `breakpoint-above()`
+3. `breakpoint-between()`
 
 And 7 variables to define the viewport width:
 

@@ -1,5 +1,8 @@
-// Breakpoints
+// Breakpoint
 // ======================================================================
+
+// ----
+// Human-friendly breakpoints.
 
 $viewport-narrowest: 0 !default;
 $viewport-narrower: 0 !default;
@@ -9,19 +12,19 @@ $viewport-wide: 0 !default;
 $viewport-wider: 0 !default;
 $viewport-widest: 0 !default;
 
-@mixin less-than($viewport-width) {
+@mixin breakpoint-below($viewport-width) {
   @media only screen and (max-width: $viewport-width) {
     @content;
   }
 }
 
-@mixin greater-than($viewport-width) {
+@mixin breakpoint-above($viewport-width) {
   @media only screen and (min-width: $viewport-width) {
     @content;
   }
 }
 
-@mixin between($viewport-min-width, $viewport-max-width) {
+@mixin breakpoint-between($viewport-min-width, $viewport-max-width) {
   @media only screen and (min-width: $viewport-min-width) and (max-width: $viewport-max-width) {
     @content;
   }
