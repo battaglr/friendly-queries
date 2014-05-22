@@ -7,7 +7,7 @@ Human-friendly breakpoints with Sass.
 A small set of mixins that attempts to make working with media queries a bit
 easier by using memorable names to define each breakpoint.
 
-If you're looking for an extensive solution, this isn't for you. We keep things
+If you’re looking for an extensive solution, this isn’t for you. We keep things
 simple in here.
 
 ## How do I use it?
@@ -28,7 +28,7 @@ And 7 variables to define the viewport width:
 6. `$viewport-wider`
 7. `$viewport-widest`
 
-If you're familiar with Sass, the usage is very straight forward:
+If you’re familiar with Sass, the usage is very straight forward:
 
 ```scss
 selector {
@@ -42,11 +42,11 @@ selector {
 
 ## Let content determine your breakpoints!
 
-You will notice that the value of all variables is `0`. That's to ~~annoy~~
+You will notice that the value of all variables is `0`. That’s to ~~annoy~~
 help you remember that devices do not matter, your content does. Let it define
 your breakpoints.
 
 ## License
 
-I don't care about legal stuff nor attribution. Do whatever you want with this,
-it's public domain.
+I don’t care about legal stuff nor attribution. Do whatever you want with this,
+it’s public domain.
