@@ -1,6 +1,6 @@
 # Breakpoint
 
-Human-friendly breakpoints with Sass.
+Human-friendly media queries with Sass.
 
 ## What is this?
 
@@ -35,6 +35,20 @@ selector {
   property: value;
 
   @include breakpoint-above($viewport-narrow) {
+    another-property: value;
+  }
+}
+```
+
+And the output will be:
+
+```css
+selector {
+  property: value;
+}
+
+@media only screen and (min-width: 40em) {
+  selector {
     another-property: value;
   }
 }
