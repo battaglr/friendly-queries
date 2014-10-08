@@ -110,8 +110,8 @@ _Requires Sass ^3.4.0._
 Available mixins:
 
 1. `density-above()`
-2. `device-below()`
-3. `device-between()`
+2. `density-below()`
+3. `density-between()`
 4. `device-above()`
 5. `device-below()`
 6. `device-between()`
