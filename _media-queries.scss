@@ -1,0 +1,159 @@
+// > Medly queries
+// ---------------------------------------------------------------- //
+
+// >> Default map values
+// ------------------------------------------------------ //
+
+$media-conditions: (
+  horizontal: (
+    smallest: 0,
+    smaller: 0,
+    small: 0,
+    medium: 0,
+    large: 0,
+    larger: 0,
+    largest: 0
+  ),
+  vertical: (
+    smallest: 0,
+    smaller: 0,
+    small: 0,
+    medium: 0,
+    large: 0,
+    larger: 0,
+    largest: 0
+  ),
+  density: (
+    low: 1,
+    medium: 1.3,
+    high: 1.5,
+    higher: 2,
+    highest: 3
+  )
+) !default;
+
+// >> Helpers
+// ------------------------------------------------------ //
+
+// >>> Get condition
+// -------------------------------------------- //
+
+@function get-media-condition($type, $key) {
+  $nested-map: map-get($media-conditions, $type);
+
+  @if (map-has-key($nested-map, $key)) {
+    @return map-get($nested-map, $key);
+  } @else {
+    @error 'The `#{$key}` key does not exist in `$media-conditions` map.';
+  }
+}
+
+// >>> Get direction
+// -------------------------------------------- //
+
+@function get-media-direction($direction) {
+  @if ($direction == horizontal) {
+    @return width;
+  } @else if ($direction == vertical) {
+    @return height;
+  } @else {
+    @error '`#{$direction}` it is not a valid direction value.';
+  }
+}
+
+// >>> Get orientation
+// -------------------------------------------- //
+
+@function get-media-orientation($mode) {
+  @if ($mode == landscape or $mode == portrait) {
+    @return $mode;
+  } @else {
+    @error '`#{$mode}` it is not a valid orientation value.';
+  }
+}
+
+// >> Mixins
+// ------------------------------------------------------ //
+
+@mixin density-above($ratio) {
+  @media only screen
+  and (-webkit-min-device-pixel-ratio: get-media-condition(density, $ratio)), only screen
+  and (min-resolution: floor(get-media-condition(density, $ratio) * 96dpi)) {
+    @content;
+  }
+}
+
+@mixin density-below($ratio) {
+  @media only screen
+  and (-webkit-max-device-pixel-ratio: get-media-condition(density, $ratio)), only screen
+  and (max-resolution: floor(get-media-condition(density, $ratio) * 96dpi)) {
+    @content;
+  }
+}
+
+@mixin density-between($min-ratio, $max-ratio) {
+  @media only screen
+  and (-webkit-min-device-pixel-ratio: get-media-condition(density, $min-ratio))
+  and (-webkit-max-device-pixel-ratio: get-media-condition(density, $max-ratio)), only screen
+  and (min-resolution: floor(get-media-condition(density, $min-ratio) * 96dpi))
+  and (max-resolution: floor(get-media-condition(density, $max-ratio) * 96dpi)) {
+    @content;
+  }
+}
+
+@mixin device-above($length, $direction: horizontal) {
+  @media only screen
+    and (min-device-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
+    @content;
+  }
+}
+
+@mixin device-below($length, $direction: horizontal) {
+  @media only screen
+    and (max-device-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
+    @content;
+  }
+}
+
+@mixin device-between($min-length, $max-length, $direction: horizontal) {
+  @media only screen
+    and (min-device-#{get-media-direction($direction)}: get-media-condition($direction, $min-length))
+    and (max-device-#{get-media-direction($direction)}: get-media-condition($direction, $max-length)) {
+    @content;
+  }
+}
+
+@mixin orientation($mode) {
+  @media only screen
+  and (orientation: get-media-orientation($mode)) {
+    @content;
+  }
+}
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}
+
+@mixin viewport-above($length, $direction: horizontal) {
+  @media only screen
+    and (min-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
+    @content;
+  }
+}
+
+@mixin viewport-below($length, $direction: horizontal) {
+  @media only screen
+    and (max-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
+    @content;
+  }
+}
+
+@mixin viewport-between($min-length, $max-length, $direction: horizontal) {
+  @media only screen
+    and (min-#{get-media-direction($direction)}: get-media-condition($direction, $min-length))
+    and (max-#{get-media-direction($direction)}: get-media-condition($direction, $max-length)) {
+    @content;
+  }
+}

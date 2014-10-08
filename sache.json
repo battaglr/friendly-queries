@@ -1,0 +1,13 @@
+{
+  "name": "Medly queries",
+  "description": "Human-friendly media queries in Sass",
+  "tags": [
+    "media-queries",
+    "mediaqueries",
+    "breakpoints",
+    "breakpoint",
+    "responsive",
+    "rwd",
+    "sass"
+  ]
+}

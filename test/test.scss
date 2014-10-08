@@ -1,0 +1,271 @@
+// > Test
+// ---------------------------------------------------------------- //
+
+@import '../media-queries';
+
+// >> Values
+// ------------------------------------------------------ //
+
+$media-conditions: (
+  horizontal: (
+    smallest: 320px,
+    smaller: 480px,
+    small: 720px,
+    medium: 960px,
+    large: 1280px,
+    larger: 1600px,
+    largest: 2560px
+  ),
+  vertical: (
+    smallest: 320px,
+    smaller: 360px,
+    small: 400px,
+    medium: 540px,
+    large: 600px,
+    larger: 800px,
+    largest: 1024px
+  ),
+  density: (
+    low: 1,
+    medium: 1.3,
+    high: 1.5,
+    higher: 2,
+    highest: 3
+  )
+);
+
+// >> Base styles
+// ------------------------------------------------------ //
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: #f3f3f3;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+.medly-tests {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// >> Tests
+// ------------------------------------------------------ //
+
+$color-not-applied: #dd514c;
+$color-applied: #5eb95e;
+
+// >>> Density
+// -------------------------------------------- //
+
+.medly-tests__density-above:after {
+  content: '`high` is not applied.';
+  color: $color-not-applied;
+
+  @include density-above(high) {
+    content: '`high` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__density-below:after {
+  content: '`medium` is not applied.';
+  color: $color-not-applied;
+
+  @include density-below(medium) {
+    content: '`medium` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__density-between:after {
+  content: '`low` and `medium` is not applied.';
+  color: $color-not-applied;
+
+  @include density-between(low, medium) {
+    content: '`low` and `medium` is applied.';
+    color: $color-applied;
+  }
+}
+
+// >>> Device
+// -------------------------------------------- //
+
+.medly-tests__device-above-horizontal:after {
+  content: '`smaller` is not applied.';
+  color: $color-not-applied;
+
+  @include device-above(smaller) {
+    content: '`smaller` is applied.';
+    color: $color-applied;
+  }
+}
+
+
+.medly-tests__device-below-horizontal:after {
+  content: '`smaller` is not applied.';
+  color: $color-not-applied;
+
+  @include device-below(smaller) {
+    content: '`smaller` is applied.';
+    color: $color-applied;
+  }
+}
+
+
+.medly-tests__device-between-horizontal:after {
+  content: '`smaller` and `large` is not applied.';
+  color: $color-not-applied;
+
+  @include device-between(smaller, large) {
+    content: '`smaller` and `large` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__device-above-vertical:after {
+  content: '`largest` is not applied.';
+  color: $color-not-applied;
+
+  @include device-above(largest, vertical) {
+    content: '`largest` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__device-below-vertical:after {
+  content: '`medium` is not applied.';
+  color: $color-not-applied;
+
+  @include device-below(medium, vertical) {
+    content: '`medium` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__device-between-vertical:after {
+  content: '`smallest` and `largest` is not applied.';
+  color: $color-not-applied;
+
+  @include device-between(smallest, largest, vertical) {
+    content: '`smallest` and `largest` is applied.';
+    color: $color-applied;
+  }
+}
+
+// >>> Orientation
+// -------------------------------------------- //
+
+.medly-tests__orientation-landscape:after {
+  content: 'is not applied.';
+  color: $color-not-applied;
+
+  @include orientation(landscape) {
+    content: 'is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__orientation-portrait:after {
+  content: 'is not applied.';
+  color: $color-not-applied;
+
+  @include orientation(portrait) {
+    content: 'is applied.';
+    color: $color-applied;
+  }
+}
+
+// >>> Print
+// -------------------------------------------- //
+
+.medly-tests__print:after {
+  content: 'is not applied.';
+  color: $color-not-applied;
+
+  @include print() {
+    content: 'is applied.';
+    color: $color-applied;
+  }
+}
+
+// >>> Viewport
+// -------------------------------------------- //
+
+.medly-tests__viewport-above-horizontal:after {
+  content: '`medium` is not applied.';
+  color: $color-not-applied;
+
+  @include viewport-above(medium) {
+    content: '`medium` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__viewport-below-horizontal:after {
+  content: '`medium` is not applied.';
+  color: $color-not-applied;
+
+  @include viewport-below(medium) {
+    content: '`medium` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__viewport-between-horizontal:after {
+  content: '`medium` and `larger` is not applied.';
+  color: $color-not-applied;
+
+  @include viewport-between(medium, larger) {
+    content: '`medium` and `larger` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__viewport-above-vertical:after {
+  content: '`larger` is not applied.';
+  color: $color-not-applied;
+
+  @include viewport-above(larger, vertical) {
+    content: '`larger` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__viewport-below-vertical:after {
+  content: '`larger` is not applied.';
+  color: $color-not-applied;
+
+  @include viewport-below(larger, vertical) {
+    content: '`larger` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__viewport-between-vertical:after {
+  content: '`small` and `larger` is not applied.';
+  color: $color-not-applied;
+
+  @include viewport-between(small, larger, vertical) {
+    content: '`small` and `larger` is applied.';
+    color: $color-applied;
+  }
+}
+
+.medly-tests__nested:after {
+  content: '`smaller` and `portrait` is not applied.';
+  color: $color-not-applied;
+
+  @include viewport-above(smaller) {
+    content: '`smaller` (but not `portrait`) is applied.';
+    color: $color-not-applied;
+
+    @include orientation(portrait) {
+      content: '`smaller` and `portrait` is applied.';
+      color: $color-applied;
+    }
+  }
+}
