@@ -14,34 +14,34 @@ body {
 }
 
 .medly-tests__density-above:after {
-  content: '`high` is not applied.';
+  content: '`hdpi` is not applied.';
   color: #dd514c;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   .medly-tests__density-above:after {
-    content: '`high` is applied.';
+    content: '`hdpi` is applied.';
     color: #5eb95e;
   }
 }
 
 .medly-tests__density-below:after {
-  content: '`medium` is not applied.';
+  content: '`tvdpi` is not applied.';
   color: #dd514c;
 }
 @media only screen and (-webkit-max-device-pixel-ratio: 1.3), only screen and (max-resolution: 124dpi) {
   .medly-tests__density-below:after {
-    content: '`medium` is applied.';
+    content: '`tvdpi` is applied.';
     color: #5eb95e;
   }
 }
 
 .medly-tests__density-between:after {
-  content: '`low` and `medium` is not applied.';
+  content: '`mdpi` and `tvdpi` is not applied.';
   color: #dd514c;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1) and (-webkit-max-device-pixel-ratio: 1.3), only screen and (min-resolution: 96dpi) and (max-resolution: 124dpi) {
   .medly-tests__density-between:after {
-    content: '`low` and `medium` is applied.';
+    content: '`mdpi` and `tvdpi` is applied.';
     color: #5eb95e;
   }
 }
