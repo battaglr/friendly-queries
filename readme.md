@@ -1,64 +1,134 @@
-# Breakpoint
+# Medly queries
 
-Human-friendly media queries with Sass.
+Human-friendly media queries in Sass.
 
-## What is this?
+## Overview
 
-A small set of mixins that attempts to make working with media queries a bit
-easier by using memorable names to define each breakpoint.
+A set of mixins that attempts to make working with media queries a bit easier
+by using memorable names to define them.
 
-If you’re looking for an extensive solution, this isn’t for you. We keep things
-simple in here.
+## Installation
 
-## How do I use it?
-
-There are 3 different mixins to choose from:
-
-1. `breakpoint-below()`
-2. `breakpoint-above()`
-3. `breakpoint-between()`
-
-And 7 variables to define the viewport width:
-
-1. `$viewport-narrowest`
-2. `$viewport-narrower`
-3. `$viewport-narrow`
-4. `$viewport-medium`
-5. `$viewport-wide`
-6. `$viewport-wider`
-7. `$viewport-widest`
-
-If you’re familiar with Sass, the usage is very straight forward:
-
-```scss
-selector {
-  property: value;
-
-  @include breakpoint-above($viewport-narrow) {
-    another-property: value;
-  }
-}
+```sh
+$ bower install medly-queries
 ```
 
-And the output will be:
+_Requires Sass ^3.4.0._
 
-```css
-selector {
-  property: value;
-}
+## Usage
 
-@media only screen and (min-width: 40em) {
+1. Basic usage:
+
+  ```scss
   selector {
-    another-property: value;
+    property: value;
+  
+    @include viewport-above(narrow) {
+      another-property: value;
+    }
   }
-}
-```
+  ```
+  
+  _Output:_
+  
+  ```css
+  selector {
+    property: value;
+  }
+  
+  @media only screen and (min-width: 40em) {
+    selector {
+      another-property: value;
+    }
+  }
+  ```
+  
+2. Modify the direction:
 
-## Let content determine your breakpoints!
+  ```scss
+  selector {
+    property: value;
+  
+    @include device-below(large, vertical) {
+      another-property: value;
+    }
+  }
+  ```
+  
+  _Output:_
+  
+  ```css
+  selector {
+    property: value;
+  }
+  
+  @media only screen and (min-device-height: 64em) {
+    selector {
+      another-property: value;
+    }
+  }
+  ```
+  
+3. Nesting:
 
-You will notice that the value of all variables is `0`. That’s to ~~annoy~~
-help you remember that devices do not matter, your content does. Let it define
-your breakpoints.
+  ```scss
+  selector {
+    property: value;
+  
+    @include device-below(small, vertical) {
+      another-property: value;
+      
+      @include orientation(portrait) {
+        different-property: value;
+      }
+    }
+  }
+  ```
+  
+  _Output:_
+  
+  ```css
+  selector {
+    property: value;
+  }
+  
+  @media only screen and (min-height: 25em) {
+    selector {
+      another-property: value;
+    }
+  }
+  
+  @media only screen and (min-height: 25em) and (orientation: portrait) {
+    selector {
+      different-property: value;
+    }
+  }
+  ```
+
+### Mixins
+
+Available mixins:
+
+1. `density-above()`
+2. `density-below()`
+3. `density-between()`
+4. `device-above()`
+5. `device-below()`
+6. `device-between()`
+7. `orientation()`
+8. `print()`
+9. `viewport-above()`
+10. `viewport-below()`
+11. `viewport-between()`
+
+### Conditions
+
+Define the different conditions for the media queries inside the
+`$media-conditions` map.
+
+__Note__: `horizontal` and `vertical` keys are `0` by default, to help you
+remember that the only thing that should determinate those dimensions is your
+content.
 
 ## License
 
