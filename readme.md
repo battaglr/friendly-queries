@@ -24,7 +24,7 @@ _Requires Sass ^3.4.0._
     property: value;
   
     @include viewport-above(narrow) {
-      another-property: value;
+      property: value;
     }
   }
   ```
@@ -38,7 +38,7 @@ _Requires Sass ^3.4.0._
   
   @media only screen and (min-width: 40em) {
     selector {
-      another-property: value;
+      property: value;
     }
   }
   ```
@@ -50,7 +50,7 @@ _Requires Sass ^3.4.0._
     property: value;
   
     @include device-below(large, vertical) {
-      another-property: value;
+      property: value;
     }
   }
   ```
@@ -64,7 +64,7 @@ _Requires Sass ^3.4.0._
   
   @media only screen and (min-device-height: 64em) {
     selector {
-      another-property: value;
+      property: value;
     }
   }
   ```
@@ -76,10 +76,10 @@ _Requires Sass ^3.4.0._
     property: value;
   
     @include device-below(small, vertical) {
-      another-property: value;
+      property: value;
       
       @include orientation(portrait) {
-        different-property: value;
+        property: value;
       }
     }
   }
@@ -94,13 +94,13 @@ _Requires Sass ^3.4.0._
   
   @media only screen and (min-height: 25em) {
     selector {
-      another-property: value;
+      property: value;
     }
   }
   
   @media only screen and (min-height: 25em) and (orientation: portrait) {
     selector {
-      different-property: value;
+      property: value;
     }
   }
   ```
