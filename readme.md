@@ -22,82 +22,82 @@ _Requires Sass ^3.4.0._
   ```scss
   selector {
     property: value;
-  
+
     @include viewport-above(narrow) {
       property: value;
     }
   }
   ```
-  
+
   _Output:_
-  
+
   ```css
   selector {
     property: value;
   }
-  
+
   @media only screen and (min-width: 40em) {
     selector {
       property: value;
     }
   }
   ```
-  
+
 2. Modify the direction:
 
   ```scss
   selector {
     property: value;
-  
+
     @include device-below(large, vertical) {
       property: value;
     }
   }
   ```
-  
+
   _Output:_
-  
+
   ```css
   selector {
     property: value;
   }
-  
+
   @media only screen and (min-device-height: 64em) {
     selector {
       property: value;
     }
   }
   ```
-  
+
 3. Nesting:
 
   ```scss
   selector {
     property: value;
-  
+
     @include device-below(small, vertical) {
       property: value;
-      
+
       @include orientation(portrait) {
         property: value;
       }
     }
   }
   ```
-  
+
   _Output:_
-  
+
   ```css
   selector {
     property: value;
   }
-  
+
   @media only screen and (min-height: 25em) {
     selector {
       property: value;
     }
   }
-  
+
   @media only screen and (min-height: 25em) and (orientation: portrait) {
     selector {
       property: value;
