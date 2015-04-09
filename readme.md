@@ -132,4 +132,4 @@ content.
 
 ## License
 
-Released under the [MIT license](license.md).
+Released under the [MIT license](license.txt).
