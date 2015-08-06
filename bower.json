@@ -8,24 +8,24 @@
       "email": "hi@lucianobattagliero.com"
     }
   ],
-  "main": "_media-queries.scss",
-  "ignore": [
-    ".*",
-    "test/",
-    "sache.json"
-  ],
-  "keywords": [
-    "media-queries",
-    "mediaqueries",
-    "breakpoints",
-    "breakpoint",
-    "responsive",
-    "rwd",
-    "sass"
-  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/battaglr/medly-queries.git"
   },
-  "license": "MIT"
+  "keywords": [
+    "breakpoint",
+    "breakpoints",
+    "media-queries",
+    "mediaqueries",
+    "responsive",
+    "rwd",
+    "sass"
+  ],
+  "main": "_media-queries.scss",
+  "ignore": [
+    ".*",
+    "readme.md",
+    "test/"
+  ],
 }
