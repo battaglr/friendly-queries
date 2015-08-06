@@ -130,6 +130,11 @@ Define the different conditions for the media queries inside the
 remember that the only thing that should determinate those dimensions is your
 content.
 
+## Contributing
+
+Contributions are welcome! Please, read the [contribution guidelines]
+(contributing.md) first.
+
 ## License
 
 Released under the [MIT license](license.txt).
