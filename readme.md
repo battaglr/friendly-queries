@@ -13,7 +13,7 @@ by using memorable names to define them.
 $ bower install medly-queries
 ```
 
-_Requires Sass ^3.4.0._
+*Requires Sass ^3.4.0.*
 
 ## Usage
 
@@ -29,7 +29,7 @@ _Requires Sass ^3.4.0._
   }
   ```
 
-  _Output:_
+  *Output:*
 
   ```css
   selector {
@@ -55,7 +55,7 @@ _Requires Sass ^3.4.0._
   }
   ```
 
-  _Output:_
+  *Output:*
 
   ```css
   selector {
@@ -85,7 +85,7 @@ _Requires Sass ^3.4.0._
   }
   ```
 
-  _Output:_
+  *Output:*
 
   ```css
   selector {
@@ -126,7 +126,7 @@ Available mixins:
 Define the different conditions for the media queries inside the
 `$media-conditions` map.
 
-__Note__: `horizontal` and `vertical` keys are `0` by default, to help you
+**Note**: `horizontal` and `vertical` keys are `0` by default, to help you
 remember that the only thing that should determinate those dimensions is your
 content.
 
