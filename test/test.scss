@@ -39,6 +39,11 @@ $media-conditions: (
 // >> Base styles
 // ------------------------------------------------------ //
 
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   padding: 20px;
@@ -106,7 +111,6 @@ $color-applied: #5eb95e;
   }
 }
 
-
 .medly-tests__device-below-horizontal:after {
   content: '`smaller` is not applied.';
   color: $color-not-applied;
@@ -116,7 +120,6 @@ $color-applied: #5eb95e;
     color: $color-applied;
   }
 }
-
 
 .medly-tests__device-between-horizontal:after {
   content: '`smaller` and `large` is not applied.';

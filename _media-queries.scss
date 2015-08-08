@@ -78,56 +78,56 @@ $media-conditions: (
 // ------------------------------------------------------ //
 
 @mixin density-above($ratio) {
-  @media only screen
-  and (-webkit-min-device-pixel-ratio: get-media-condition(density, $ratio)), only screen
-  and (min-resolution: floor(get-media-condition(density, $ratio) * 96dpi)) {
+  @media
+  (-webkit-min-device-pixel-ratio: get-media-condition(density, $ratio)),
+  (min-resolution: floor(get-media-condition(density, $ratio) * 96dpi)) {
     @content;
   }
 }
 
 @mixin density-below($ratio) {
-  @media only screen
-  and (-webkit-max-device-pixel-ratio: get-media-condition(density, $ratio)), only screen
-  and (max-resolution: floor(get-media-condition(density, $ratio) * 96dpi)) {
+  @media
+  (-webkit-max-device-pixel-ratio: get-media-condition(density, $ratio)),
+  (max-resolution: floor(get-media-condition(density, $ratio) * 96dpi)) {
     @content;
   }
 }
 
 @mixin density-between($min-ratio, $max-ratio) {
-  @media only screen
-  and (-webkit-min-device-pixel-ratio: get-media-condition(density, $min-ratio))
-  and (-webkit-max-device-pixel-ratio: get-media-condition(density, $max-ratio)), only screen
-  and (min-resolution: floor(get-media-condition(density, $min-ratio) * 96dpi))
+  @media
+  (-webkit-min-device-pixel-ratio: get-media-condition(density, $min-ratio))
+  and (-webkit-max-device-pixel-ratio: get-media-condition(density, $max-ratio)),
+  (min-resolution: floor(get-media-condition(density, $min-ratio) * 96dpi))
   and (max-resolution: floor(get-media-condition(density, $max-ratio) * 96dpi)) {
     @content;
   }
 }
 
 @mixin device-above($length, $direction: horizontal) {
-  @media only screen
-    and (min-device-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
+  @media
+  (min-device-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
     @content;
   }
 }
 
 @mixin device-below($length, $direction: horizontal) {
-  @media only screen
-    and (max-device-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
+  @media
+  (max-device-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
     @content;
   }
 }
 
 @mixin device-between($min-length, $max-length, $direction: horizontal) {
-  @media only screen
-    and (min-device-#{get-media-direction($direction)}: get-media-condition($direction, $min-length))
-    and (max-device-#{get-media-direction($direction)}: get-media-condition($direction, $max-length)) {
+  @media
+  (min-device-#{get-media-direction($direction)}: get-media-condition($direction, $min-length))
+  and (max-device-#{get-media-direction($direction)}: get-media-condition($direction, $max-length)) {
     @content;
   }
 }
 
 @mixin orientation($mode) {
-  @media only screen
-  and (orientation: get-media-orientation($mode)) {
+  @media
+  (orientation: get-media-orientation($mode)) {
     @content;
   }
 }
@@ -139,23 +139,23 @@ $media-conditions: (
 }
 
 @mixin viewport-above($length, $direction: horizontal) {
-  @media only screen
-    and (min-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
+  @media
+  (min-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
     @content;
   }
 }
 
 @mixin viewport-below($length, $direction: horizontal) {
-  @media only screen
-    and (max-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
+  @media
+  (max-#{get-media-direction($direction)}: get-media-condition($direction, $length)) {
     @content;
   }
 }
 
 @mixin viewport-between($min-length, $max-length, $direction: horizontal) {
-  @media only screen
-    and (min-#{get-media-direction($direction)}: get-media-condition($direction, $min-length))
-    and (max-#{get-media-direction($direction)}: get-media-condition($direction, $max-length)) {
+  @media
+  (min-#{get-media-direction($direction)}: get-media-condition($direction, $min-length))
+  and (max-#{get-media-direction($direction)}: get-media-condition($direction, $max-length)) {
     @content;
   }
 }

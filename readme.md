@@ -36,7 +36,7 @@ $ bower install medly-queries
     property: value;
   }
 
-  @media only screen and (min-width: 40em) {
+  @media (min-width: 40em) {
     selector {
       property: value;
     }
@@ -62,7 +62,7 @@ $ bower install medly-queries
     property: value;
   }
 
-  @media only screen and (min-device-height: 64em) {
+  @media (min-device-height: 64em) {
     selector {
       property: value;
     }
@@ -92,13 +92,13 @@ $ bower install medly-queries
     property: value;
   }
 
-  @media only screen and (min-height: 25em) {
+  @media (min-height: 25em) {
     selector {
       property: value;
     }
   }
 
-  @media only screen and (min-height: 25em) and (orientation: portrait) {
+  @media (min-height: 25em) and (orientation: portrait) {
     selector {
       property: value;
     }
