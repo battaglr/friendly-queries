@@ -1,8 +1,11 @@
-// > Medly queries
-// ---------------------------------------------------------------- //
+////
+// Medly queries
+// Human-friendly media queries in Sass
+// v1.0.0-beta | MIT
+//
 
-// >> Default map values
-// ------------------------------------------------------ //
+// > Default map values
+// ---------------------------------------------------------------- //
 
 $media-conditions: (
   horizontal: (
@@ -34,11 +37,8 @@ $media-conditions: (
   )
 ) !default;
 
-// >> Helpers
-// ------------------------------------------------------ //
-
-// >>> Get condition
-// -------------------------------------------- //
+// > Helpers
+// ---------------------------------------------------------------- //
 
 @function get-media-condition($type, $key) {
   $nested-map: map-get($media-conditions, $type);
@@ -50,9 +50,6 @@ $media-conditions: (
   }
 }
 
-// >>> Get direction
-// -------------------------------------------- //
-
 @function get-media-direction($direction) {
   @if $direction == horizontal {
     @return width;
@@ -63,9 +60,6 @@ $media-conditions: (
   }
 }
 
-// >>> Get orientation
-// -------------------------------------------- //
-
 @function get-media-orientation($mode) {
   @if $mode == landscape or $mode == portrait {
     @return $mode;
@@ -74,8 +68,8 @@ $media-conditions: (
   }
 }
 
-// >> Mixins
-// ------------------------------------------------------ //
+// > Mixins
+// ---------------------------------------------------------------- //
 
 @mixin density-above($ratio) {
   @media
