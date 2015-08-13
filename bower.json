@@ -22,7 +22,7 @@
     "rwd",
     "sass"
   ],
-  "main": "_media-queries.scss",
+  "main": "medly-queries.scss",
   "ignore": [
     ".*",
     "readme.md",
