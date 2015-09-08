@@ -1,10 +1,11 @@
-// > Test
+////
+// Test
+//
+
+// > Settings
 // ---------------------------------------------------------------- //
 
 @import '../medly-queries';
-
-// >> Values
-// ------------------------------------------------------ //
 
 $media-conditions: (
   horizontal: (
@@ -36,8 +37,17 @@ $media-conditions: (
   )
 );
 
+// > Tests
+// ---------------------------------------------------------------- //
+
 // >> Base styles
 // ------------------------------------------------------ //
+
+$color-applied: #5eb95e;
+$color-not-applied: #dd514c;
+
+$string-applied: 'is applied.';
+$string-not-applied: 'is not applied.';
 
 html {
   -ms-text-size-adjust: 100%;
@@ -45,232 +55,236 @@ html {
 }
 
 body {
+  color: #666;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
   margin: 0;
-  padding: 20px;
-  background: #f3f3f3;
-  font-family: Consolas, monospace;
-  font-size: 14px;
-  color: #333;
+  padding: 15px;
 }
 
-.medly-tests {
+.test {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-// >> Tests
+.test__item {
+  background: $color-not-applied;
+  color: #fff;
+  padding: 15px;
+
+  + .test__item {
+    margin-top: 15px;
+  }
+
+  &:after {
+    content: $string-not-applied;
+  }
+}
+
+// >> Viewport
 // ------------------------------------------------------ //
 
-$color-not-applied: #dd514c;
-$color-applied: #5eb95e;
-
-// >>> Density
-// -------------------------------------------- //
-
-.medly-tests__density-above:after {
-  content: '`hdpi` is not applied.';
-  color: $color-not-applied;
-
-  @include density-above(hdpi) {
-    content: '`hdpi` is applied.';
-    color: $color-applied;
-  }
-}
-
-.medly-tests__density-below:after {
-  content: '`tvdpi` is not applied.';
-  color: $color-not-applied;
-
-  @include density-below(tvdpi) {
-    content: '`tvdpi` is applied.';
-    color: $color-applied;
-  }
-}
-
-.medly-tests__density-between:after {
-  content: '`mdpi` and `tvdpi` is not applied.';
-  color: $color-not-applied;
-
-  @include density-between(mdpi, tvdpi) {
-    content: '`mdpi` and `tvdpi` is applied.';
-    color: $color-applied;
-  }
-}
-
-// >>> Device
-// -------------------------------------------- //
-
-.medly-tests__device-above-horizontal:after {
-  content: '`smaller` is not applied.';
-  color: $color-not-applied;
-
-  @include device-above(smaller) {
-    content: '`smaller` is applied.';
-    color: $color-applied;
-  }
-}
-
-.medly-tests__device-below-horizontal:after {
-  content: '`smaller` is not applied.';
-  color: $color-not-applied;
-
-  @include device-below(smaller) {
-    content: '`smaller` is applied.';
-    color: $color-applied;
-  }
-}
-
-.medly-tests__device-between-horizontal:after {
-  content: '`smaller` and `large` is not applied.';
-  color: $color-not-applied;
-
-  @include device-between(smaller, large) {
-    content: '`smaller` and `large` is applied.';
-    color: $color-applied;
-  }
-}
-
-.medly-tests__device-above-vertical:after {
-  content: '`largest` is not applied.';
-  color: $color-not-applied;
-
-  @include device-above(largest, vertical) {
-    content: '`largest` is applied.';
-    color: $color-applied;
-  }
-}
-
-.medly-tests__device-below-vertical:after {
-  content: '`medium` is not applied.';
-  color: $color-not-applied;
-
-  @include device-below(medium, vertical) {
-    content: '`medium` is applied.';
-    color: $color-applied;
-  }
-}
-
-.medly-tests__device-between-vertical:after {
-  content: '`smallest` and `largest` is not applied.';
-  color: $color-not-applied;
-
-  @include device-between(smallest, largest, vertical) {
-    content: '`smallest` and `largest` is applied.';
-    color: $color-applied;
-  }
-}
-
-// >>> Orientation
-// -------------------------------------------- //
-
-.medly-tests__orientation-landscape:after {
-  content: 'is not applied.';
-  color: $color-not-applied;
-
-  @include orientation(landscape) {
-    content: 'is applied.';
-    color: $color-applied;
-  }
-}
-
-.medly-tests__orientation-portrait:after {
-  content: 'is not applied.';
-  color: $color-not-applied;
-
-  @include orientation(portrait) {
-    content: 'is applied.';
-    color: $color-applied;
-  }
-}
-
-// >>> Print
-// -------------------------------------------- //
-
-.medly-tests__print:after {
-  content: 'is not applied.';
-  color: $color-not-applied;
-
-  @include print() {
-    content: 'is applied.';
-    color: $color-applied;
-  }
-}
-
-// >>> Viewport
-// -------------------------------------------- //
-
-.medly-tests__viewport-above-horizontal:after {
-  content: '`medium` is not applied.';
-  color: $color-not-applied;
-
+.test__item--viewport-above-horizontal {
   @include viewport-above(medium) {
-    content: '`medium` is applied.';
-    color: $color-applied;
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
   }
 }
 
-.medly-tests__viewport-below-horizontal:after {
-  content: '`medium` is not applied.';
-  color: $color-not-applied;
-
+.test__item--viewport-below-horizontal {
   @include viewport-below(medium) {
-    content: '`medium` is applied.';
-    color: $color-applied;
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
   }
 }
 
-.medly-tests__viewport-between-horizontal:after {
-  content: '`medium` and `larger` is not applied.';
-  color: $color-not-applied;
-
+.test__item--viewport-between-horizontal {
   @include viewport-between(medium, larger) {
-    content: '`medium` and `larger` is applied.';
-    color: $color-applied;
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
   }
 }
 
-.medly-tests__viewport-above-vertical:after {
-  content: '`larger` is not applied.';
-  color: $color-not-applied;
-
+.test__item--viewport-above-vertical {
   @include viewport-above(larger, vertical) {
-    content: '`larger` is applied.';
-    color: $color-applied;
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
   }
 }
 
-.medly-tests__viewport-below-vertical:after {
-  content: '`larger` is not applied.';
-  color: $color-not-applied;
-
+.test__item--viewport-below-vertical {
   @include viewport-below(larger, vertical) {
-    content: '`larger` is applied.';
-    color: $color-applied;
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
   }
 }
 
-.medly-tests__viewport-between-vertical:after {
-  content: '`small` and `larger` is not applied.';
-  color: $color-not-applied;
-
+.test__item--viewport-between-vertical {
   @include viewport-between(small, larger, vertical) {
-    content: '`small` and `larger` is applied.';
-    color: $color-applied;
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
   }
 }
 
-.medly-tests__nested:after {
-  content: '`smaller` and `portrait` is not applied.';
-  color: $color-not-applied;
-
+.test__item--nested {
   @include viewport-above(smaller) {
-    content: '`smaller` (but not `portrait`) is applied.';
-    color: $color-not-applied;
-
     @include orientation(portrait) {
-      content: '`smaller` and `portrait` is applied.';
-      color: $color-applied;
+      background: $color-applied;
+
+      &:after {
+          content: $string-applied;
+      }
+    }
+  }
+}
+
+// >> Orientation
+// ------------------------------------------------------ //
+
+.test__item--orientation-landscape {
+  @include orientation(landscape) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+.test__item--orientation-portrait {
+  @include orientation(portrait) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+// >> Density
+// ------------------------------------------------------ //
+
+.test__item--density-above {
+  @include density-above(hdpi) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+.test__item--density-below {
+  @include density-below(tvdpi) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+.test__item--density-between {
+  @include density-between(mdpi, tvdpi) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+// >> Device
+// ------------------------------------------------------ //
+
+.test__item--device-above-horizontal {
+  @include device-above(smaller) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+.test__item--device-below-horizontal {
+  @include device-below(smaller) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+.test__item--device-between-horizontal {
+  @include device-between(smaller, large) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+.test__item--device-above-vertical {
+  @include device-above(largest, vertical) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+.test__item--device-below-vertical {
+  @include device-below(medium, vertical) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+.test__item--device-between-vertical {
+  @include device-between(smallest, largest, vertical) {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
+    }
+  }
+}
+
+// >> Print
+// ------------------------------------------------------ //
+
+.test__item--print {
+  @include print() {
+    background: $color-applied;
+
+    &:after {
+        content: $string-applied;
     }
   }
 }
