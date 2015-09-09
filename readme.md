@@ -129,9 +129,9 @@ Available mixins:
 Define the different conditions for the media queries inside the
 `$media-conditions` map.
 
-**Note**: `horizontal` and `vertical` keys are `0` by default, to help you
+*Note: `horizontal` and `vertical` keys are `0` by default, to help you
 remember that the only thing that should determinate those dimensions is your
-content.
+content.*
 
 ## Contributing
 
