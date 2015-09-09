@@ -1,7 +1,7 @@
 {
   "name": "Medly queries",
   "description": "Human-friendly media queries in Sass",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "Luciano Battagliero",
