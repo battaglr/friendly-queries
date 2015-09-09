@@ -23,7 +23,7 @@ $ bower install medly-queries
   selector {
     property: value;
 
-    @include viewport-above(narrow) {
+    @include viewport-above(medium) {
       property: value;
     }
   }
@@ -75,7 +75,7 @@ $ bower install medly-queries
   selector {
     property: value;
 
-    @include device-below(small, vertical) {
+    @include viewport-above(small) {
       property: value;
 
       @include orientation(portrait) {
@@ -92,13 +92,13 @@ $ bower install medly-queries
     property: value;
   }
 
-  @media (min-height: 25em) {
+  @media (min-width: 25em) {
     selector {
       property: value;
     }
   }
 
-  @media (min-height: 25em) and (orientation: portrait) {
+  @media (min-width: 25em) and (orientation: portrait) {
     selector {
       property: value;
     }
