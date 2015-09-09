@@ -105,6 +105,9 @@ $ bower install medly-queries
   }
   ```
 
+*You can see it in action on the
+[test page](https://battaglr.github.io/medly-queries/test/test.html).*
+
 ### Mixins
 
 Available mixins:
