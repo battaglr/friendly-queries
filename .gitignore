@@ -13,10 +13,6 @@ Thumbs.db
 .settings
 .tmproj
 
-# Packages
-bower_components
-node_modules
-
 # Others
 *.diff
 *.err
