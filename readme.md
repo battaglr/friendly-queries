@@ -7,14 +7,6 @@ Human-friendly media queries in Sass.
 A set of mixins that attempts to make working with media queries a bit easier
 by using memorable names to define them.
 
-## Installation
-
-```sh
-$ bower install medly-queries
-```
-
-*Requires Sass ^3.4.0.*
-
 ## Usage
 
 1. Basic usage:
