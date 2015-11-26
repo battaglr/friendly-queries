@@ -100,23 +100,21 @@ by using memorable names to define them.
 *You can see it in action on the
 [test page](https://battaglr.github.io/medly-queries/test/test.html).*
 
-### Mixins
+## Available mixins
 
-Available mixins:
+- `density-above()`
+- `density-below()`
+- `density-between()`
+- `device-above()`
+- `device-below()`
+- `device-between()`
+- `orientation()`
+- `print()`
+- `viewport-above()`
+- `viewport-below()`
+- `viewport-between()`
 
-1. `density-above()`
-2. `density-below()`
-3. `density-between()`
-4. `device-above()`
-5. `device-below()`
-6. `device-between()`
-7. `orientation()`
-8. `print()`
-9. `viewport-above()`
-10. `viewport-below()`
-11. `viewport-between()`
-
-### Conditions
+## Conditions
 
 Define the different conditions for the media queries inside the
 `$media-conditions` map.
