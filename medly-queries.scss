@@ -4,7 +4,7 @@
 // v1.0.0 | MIT
 //
 
-// > Settings
+// Settings
 // ---------------------------------------------------------------- //
 
 $media-conditions: (
@@ -37,7 +37,7 @@ $media-conditions: (
   )
 ) !default;
 
-// > Helpers
+// Helpers
 // ---------------------------------------------------------------- //
 
 @function get-media-condition($type, $key) {
@@ -68,7 +68,7 @@ $media-conditions: (
   }
 }
 
-// > Mixins
+// Mixins
 // ---------------------------------------------------------------- //
 
 @mixin density-above($ratio) {
