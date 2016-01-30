@@ -1,4 +1,4 @@
-# Medly queries
+# Friendly queries
 
 Human-friendly media queries for Sass.
 
@@ -98,7 +98,7 @@ by using memorable names to define them.
   ```
 
 *You can see it in action on the
-[test page](https://battaglr.github.io/medly-queries/test/test.html).*
+[test page](https://battaglr.github.io/friendly-queries/test/test.html).*
 
 ## Available mixins
 
