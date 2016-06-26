@@ -121,8 +121,8 @@ Define the different conditions for the media queries inside the
 
 ## Contributing
 
-Contributions are welcome! Please, read the [contribution guidelines]
-(contributing.md) first.
+Contributions are welcome! Please, read the
+[contribution guidelines](contributing.md) first.
 
 ## License
 
