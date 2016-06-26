@@ -117,7 +117,7 @@ by using memorable names to define them.
 ## Conditions
 
 Define the different conditions for the media queries inside the
-`$media-conditions` map.
+`$friendly-queries` map.
 
 ## Contributing
 

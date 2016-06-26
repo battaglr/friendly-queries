@@ -7,7 +7,7 @@
 // Settings
 // ---------------------------------------------------------------- //
 
-$media-conditions: (
+$friendly-queries: (
   horizontal: (
     smallest: 20em,
     smaller: 30em,
@@ -41,12 +41,12 @@ $media-conditions: (
 // ---------------------------------------------------------------- //
 
 @function get-media-condition($type, $key) {
-  $nested-map: map-get($media-conditions, $type);
+  $nested-map: map-get($friendly-queries, $type);
 
   @if map-has-key($nested-map, $key) {
     @return map-get($nested-map, $key);
   } @else {
-    @error 'The `#{$key}` key does not exist in `$media-conditions` map.';
+    @error 'The `#{$key}` key does not exist in `$friendly-queries` map.';
   }
 }
 
