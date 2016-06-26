@@ -15,7 +15,7 @@ by using memorable names to define them.
   selector {
     property: value;
 
-    @include viewport-above(medium) {
+    @include viewport-above(small) {
       property: value;
     }
   }
@@ -28,7 +28,7 @@ by using memorable names to define them.
     property: value;
   }
 
-  @media (min-width: 40em) {
+  @media (min-width: 48em) {
     selector {
       property: value;
     }
@@ -84,13 +84,13 @@ by using memorable names to define them.
     property: value;
   }
 
-  @media (min-width: 25em) {
+  @media (min-width: 48em) {
     selector {
       property: value;
     }
   }
 
-  @media (min-width: 25em) and (orientation: portrait) {
+  @media (min-width: 48em) and (orientation: portrait) {
     selector {
       property: value;
     }
@@ -118,10 +118,6 @@ by using memorable names to define them.
 
 Define the different conditions for the media queries inside the
 `$media-conditions` map.
-
-*Note: `horizontal` and `vertical` keys are `0` by default, to help you
-remember that the only thing that should determinate those dimensions is your
-content.*
 
 ## Contributing
 

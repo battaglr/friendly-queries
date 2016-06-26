@@ -9,22 +9,22 @@
 
 $media-conditions: (
   horizontal: (
-    smallest: 0,
-    smaller: 0,
-    small: 0,
-    medium: 0,
-    large: 0,
-    larger: 0,
-    largest: 0
+    smallest: 20em,
+    smaller: 30em,
+    small: 48em,
+    medium: 64em,
+    large: 80em,
+    larger: 120em,
+    largest: 160em
   ),
   vertical: (
-    smallest: 0,
-    smaller: 0,
-    small: 0,
-    medium: 0,
-    large: 0,
-    larger: 0,
-    largest: 0
+    smallest: 20em,
+    smaller: 22.5em,
+    small: 25em,
+    medium: 33.75em,
+    large: 37.5em,
+    larger: 50em,
+    largest: 64em
   ),
   density: (
     ldpi: .75,
