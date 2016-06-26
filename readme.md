@@ -7,6 +7,14 @@ Human-friendly media queries for Sass.
 A set of mixins that attempts to make working with media queries a bit easier
 by using memorable names to define them.
 
+## Installation
+
+Install it using [npm](https://npmjs.com):
+
+```sh
+npm install friendly-queries
+```
+
 ## Usage
 
 1. Basic usage:

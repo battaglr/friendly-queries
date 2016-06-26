@@ -1,0 +1,39 @@
+{
+  "name": "friendly-queries",
+  "version": "1.0.1",
+  "description": "Human-friendly media queries for Sass",
+  "author": "Luciano Battagliero",
+  "license": "MIT",
+  "homepage": "https://github.com/battaglr/friendly-queries",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/battaglr/friendly-queries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/battaglr/friendly-queries/issues"
+  },
+  "main": "friendly-queries.scss",
+  "files": [
+    "friendly-queries.scss"
+  ],
+  "devDependencies": {
+    "bannerize": "1.0.2",
+    "csso": "1.8.2",
+    "gzip-size-cli": "1.0.0",
+    "node-sass": "3.8.0"
+  },
+  "scripts": {
+    "test": "node-sass --output-style expanded test/test.scss test/test.css"
+  },
+  "keywords": [
+    "media query",
+    "media queries",
+    "mq",
+    "breakpoint",
+    "breakpoints",
+    "rwd",
+    "responsive",
+    "scss",
+    "sass"
+  ]
+}

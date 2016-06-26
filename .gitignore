@@ -13,6 +13,9 @@ Thumbs.db
 .settings
 .tmproj
 
+# Packages
+node_modules
+
 # Others
 *.diff
 *.err
