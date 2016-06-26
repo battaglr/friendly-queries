@@ -36,7 +36,7 @@ small {
 }
 
 .test__item {
-  background: #dd514c;
+  background: #f44336;
   color: #fff;
   padding: 15px;
 }
@@ -51,7 +51,7 @@ small {
 
 @media (min-width: 64em) {
   .test__item--viewport-above-horizontal {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--viewport-above-horizontal:after {
     content: "is applied.";
@@ -60,7 +60,7 @@ small {
 
 @media (max-width: 64em) {
   .test__item--viewport-below-horizontal {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--viewport-below-horizontal:after {
     content: "is applied.";
@@ -69,7 +69,7 @@ small {
 
 @media (min-width: 64em) and (max-width: 120em) {
   .test__item--viewport-between-horizontal {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--viewport-between-horizontal:after {
     content: "is applied.";
@@ -78,7 +78,7 @@ small {
 
 @media (min-height: 50em) {
   .test__item--viewport-above-vertical {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--viewport-above-vertical:after {
     content: "is applied.";
@@ -87,7 +87,7 @@ small {
 
 @media (max-height: 50em) {
   .test__item--viewport-below-vertical {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--viewport-below-vertical:after {
     content: "is applied.";
@@ -96,7 +96,7 @@ small {
 
 @media (min-height: 25em) and (max-height: 50em) {
   .test__item--viewport-between-vertical {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--viewport-between-vertical:after {
     content: "is applied.";
@@ -105,7 +105,7 @@ small {
 
 @media (min-width: 30em) and (orientation: portrait) {
   .test__item--nested {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--nested:after {
     content: "is applied.";
@@ -114,7 +114,7 @@ small {
 
 @media (orientation: landscape) {
   .test__item--orientation-landscape {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--orientation-landscape:after {
     content: "is applied.";
@@ -123,7 +123,7 @@ small {
 
 @media (orientation: portrait) {
   .test__item--orientation-portrait {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--orientation-portrait:after {
     content: "is applied.";
@@ -132,7 +132,7 @@ small {
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .test__item--density-above {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--density-above:after {
     content: "is applied.";
@@ -141,7 +141,7 @@ small {
 
 @media (-webkit-max-device-pixel-ratio: 1.3), (max-resolution: 124dpi) {
   .test__item--density-below {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--density-below:after {
     content: "is applied.";
@@ -150,7 +150,7 @@ small {
 
 @media (-webkit-min-device-pixel-ratio: 1) and (-webkit-max-device-pixel-ratio: 1.3), (min-resolution: 96dpi) and (max-resolution: 124dpi) {
   .test__item--density-between {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--density-between:after {
     content: "is applied.";
@@ -159,7 +159,7 @@ small {
 
 @media (min-device-width: 30em) {
   .test__item--device-above-horizontal {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--device-above-horizontal:after {
     content: "is applied.";
@@ -168,7 +168,7 @@ small {
 
 @media (max-device-width: 30em) {
   .test__item--device-below-horizontal {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--device-below-horizontal:after {
     content: "is applied.";
@@ -177,7 +177,7 @@ small {
 
 @media (min-device-width: 30em) and (max-device-width: 80em) {
   .test__item--device-between-horizontal {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--device-between-horizontal:after {
     content: "is applied.";
@@ -186,7 +186,7 @@ small {
 
 @media (min-device-height: 64em) {
   .test__item--device-above-vertical {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--device-above-vertical:after {
     content: "is applied.";
@@ -195,7 +195,7 @@ small {
 
 @media (max-device-height: 33.75em) {
   .test__item--device-below-vertical {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--device-below-vertical:after {
     content: "is applied.";
@@ -204,7 +204,7 @@ small {
 
 @media (min-device-height: 20em) and (max-device-height: 64em) {
   .test__item--device-between-vertical {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--device-between-vertical:after {
     content: "is applied.";
@@ -213,7 +213,7 @@ small {
 
 @media print {
   .test__item--print {
-    background: #5eb95e;
+    background: #4caf50;
   }
   .test__item--print:after {
     content: "is applied.";
