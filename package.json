@@ -1,6 +1,6 @@
 {
   "name": "friendly-queries",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Human-friendly media queries for Sass",
   "author": "Luciano Battagliero",
   "license": "MIT",
