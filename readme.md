@@ -2,6 +2,10 @@
 
 Human-friendly media queries for Sass.
 
+> **IMPORTANT NOTICE**: this project is deprecated and unmaintained.
+> I no longer think that this simplifies working with media queries
+> since it only adds an unnecessary abstraction layer.
+
 ## Overview
 
 A set of mixins that attempts to make working with media queries a bit easier
